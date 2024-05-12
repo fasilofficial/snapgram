@@ -156,8 +156,11 @@ const PostForm = ({ action, post }: PostFormProps) => {
             className="shad-button_primary whitespace-nowrap capitalize"
             disabled={isLoadingCreate || isLoadingUpdate}
           >
-            {isLoadingCreate ||
-              (isLoadingUpdate ? "Loading..." : <>{action} Post</>)}
+            {isLoadingCreate || isLoadingUpdate ? (
+              "Loading..."
+            ) : (
+              <>{action} Post</>
+            )}
           </Button>
         </div>
       </form>
